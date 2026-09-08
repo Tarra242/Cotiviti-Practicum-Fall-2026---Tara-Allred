@@ -1,0 +1,97 @@
+# Cotiviti Practicum – CMS Medicare IRF Data Analysis
+
+## Project Overview
+
+This repository contains work completed as part of my Fall 2026 Biomedical Informatics practicum with Cotiviti.
+
+The project focuses on exploring publicly available CMS Medicare data to identify meaningful patterns in healthcare utilization, provider characteristics, patient populations, and Medicare payments.
+
+The initial phase of the project is exploratory. Findings from this analysis will be used to develop and refine a focused research question for subsequent analysis.
+
+## Dataset
+
+**CMS Medicare Post-Acute Care Utilization – Inpatient Rehabilitation Facility (IRF) by Geography and Provider**
+
+Current analysis uses the **2024 provider-level dataset**.
+
+The dataset contains information related to:
+
+- Inpatient rehabilitation facility utilization
+- Medicare beneficiaries
+- Episode/stay counts
+- Service days
+- Medicare charges and payments
+- Beneficiary demographics
+- Beneficiary risk scores
+- Chronic health conditions
+- Primary diagnosis categories
+- Physical therapy (PT)
+- Occupational therapy (OT)
+- Speech-language pathology (SLP)
+
+## Phase 1 – Exploratory Data Analysis
+
+**Timeline:** August 24 – September 11, 2026
+
+The purpose of Phase 1 is to understand the structure, quality, and characteristics of the CMS IRF dataset before developing a formal research question.
+
+### Current Analysis
+
+Initial exploratory analysis includes:
+
+- Reviewing dataset structure and variables
+- Separating national, state, and provider-level records
+- Identifying CMS-suppressed values
+- Evaluating data types and data quality
+- Examining provider-level utilization
+- Calculating average days per stay
+- Calculating Medicare payment per stay
+- Comparing beneficiary risk scores with Medicare payment
+- Comparing length of stay with Medicare payment
+- Examining variation and potential outliers across providers
+
+## Preliminary Observations
+
+Early exploration shows substantial variation in Medicare payment per stay among IRF providers.
+
+Initial analysis also suggests that:
+
+- Length of stay has a moderate positive relationship with Medicare payment per stay.
+- Beneficiary average risk score has little apparent linear relationship with Medicare payment per stay.
+- Medicare payment per stay is right-skewed, with a relatively small number of providers showing substantially higher payments.
+- CMS data suppression is common in several demographic, diagnosis, and chronic-condition variables and will need to be considered in future analyses.
+
+These findings are preliminary and are being used to guide further investigation rather than represent final conclusions.
+
+## Potential Research Directions
+
+Future analysis may investigate whether variation in Medicare utilization or payment is associated with:
+
+- Geographic location
+- Length of stay
+- Beneficiary risk
+- Patient demographics
+- Chronic health conditions
+- Primary diagnosis categories
+- Therapy utilization
+- Provider-level characteristics
+
+The final research question will be refined as exploratory analysis progresses and with feedback from the Cotiviti practicum team.
+
+## Tools
+
+- Python
+- pandas
+- NumPy
+- Matplotlib
+- Jupyter Notebook
+- GitHub
+- Claude/VS Code 
+
+## Project Status
+
+**Academic Term:** Fall 2026
+
+**Program:** University of Utah – Biomedical Informatics MS
+
+**Practicum Partner:** Cotiviti
