@@ -10,9 +10,9 @@ The initial phase of the project is exploratory. Findings from this analysis wil
 
 ## Dataset
 
-**CMS Medicare Post-Acute Care Utilization – Inpatient Rehabilitation Facility (IRF) by Geography and Provider**
+**CMS Medicare Post Acute Care Utilization – Inpatient Rehabilitation Facility (IRF) by Geography and Provider**
 
-Current analysis uses the **2024 provider-level dataset**.
+Current analysis uses the **2024 provider level dataset**.
 
 The dataset contains information related to:
 
@@ -27,7 +27,7 @@ The dataset contains information related to:
 - Primary diagnosis categories
 - Physical therapy (PT)
 - Occupational therapy (OT)
-- Speech-language pathology (SLP)
+- Speech/language pathology (SLP)
 
 ## Phase 1 – Exploratory Data Analysis
 
@@ -40,10 +40,10 @@ The purpose of Phase 1 is to understand the structure, quality, and characterist
 Initial exploratory analysis includes:
 
 - Reviewing dataset structure and variables
-- Separating national, state, and provider-level records
-- Identifying CMS-suppressed values
+- Separating national, state, and provider level records
+- Identifying CMS suppressed values
 - Evaluating data types and data quality
-- Examining provider-level utilization
+- Examining provider level utilization
 - Calculating average days per stay
 - Calculating Medicare payment per stay
 - Comparing beneficiary risk scores with Medicare payment
@@ -59,7 +59,7 @@ Initial analysis also suggests that:
 - Length of stay has a moderate positive relationship with Medicare payment per stay.
 - Beneficiary average risk score has little apparent linear relationship with Medicare payment per stay.
 - Medicare payment per stay is right-skewed, with a relatively small number of providers showing substantially higher payments.
-- CMS data suppression is common in several demographic, diagnosis, and chronic-condition variables and will need to be considered in future analyses.
+- CMS data suppression is common in several demographic, diagnosis, and chronic condition variables and will need to be considered in future analyses.
 
 These findings are preliminary and are being used to guide further investigation rather than represent final conclusions.
 
