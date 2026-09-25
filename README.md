@@ -100,7 +100,7 @@ Feedback from the Cotiviti practicum team will be used throughout Phase 2 to eva
 
 ### Phase 2 Milestone
 
-By the end of Phase 2, the goal is to have an **analysis-ready dataset, a finalized research question, and initial visualizations and analyses that provide direction for the next phase.**
+By the end of Phase 2, the goal is to have an **analysis ready dataset, a finalized research question, and initial visualizations and analyses that provide direction for the next phase.**
 
 ## Potential Research Directions
 
@@ -113,7 +113,7 @@ Future analysis may investigate whether variation in Medicare utilization or pay
 - Chronic health conditions
 - Primary diagnosis categories
 - Therapy utilization
-- Provider-level characteristics
+- Provider level characteristics
 
 The potential research directions identified during Phase 1 will be further evaluated and refined into a final research question during Phase 2.
 
