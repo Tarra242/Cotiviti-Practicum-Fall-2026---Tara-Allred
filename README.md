@@ -63,6 +63,45 @@ Initial analysis also suggests that:
 
 These findings are preliminary and are being used to guide further investigation rather than represent final conclusions.
 
+## Phase 2 – Data Preparation and Analysis
+
+**Timeline:** September 14 – October 9, 2026
+
+Phase 2 builds on the exploratory analysis completed during Phase 1. The focus of this phase is to prepare the data for formal analysis, further investigate the patterns identified during exploration, and refine the project research question.
+
+### Current Goals
+
+Phase 2 analysis will include:
+
+- Cleaning and preparing the provider-level dataset for analysis
+- Further evaluating CMS suppressed and missing values
+- Identifying variables most relevant to Medicare payment and utilization
+- Investigating variation and potential outliers in Medicare payment per stay
+- Examining provider-level characteristics associated with payment variation
+- Considering geographic, beneficiary risk, length of stay, diagnosis, and utilization factors
+- Adding or merging additional datasets where needed
+- Developing initial visualizations to examine important relationships and patterns
+- Using findings to refine and finalize the research question
+
+### Current Research Direction
+
+Phase 1 identified substantial variation in Medicare payment per stay among IRF providers. Phase 2 will further investigate this variation and explore which provider, utilization, beneficiary, or geographic characteristics may help explain these differences.
+
+Particular attention will be given to distinguishing variation that may be related to Medicare payment methodology from variation occurring at the provider level.
+
+### Cotiviti Feedback
+
+Feedback from the Cotiviti practicum team will be used throughout Phase 2 to evaluate:
+
+- Whether the findings support the developing research question
+- Whether important variables, comparisons, or datasets are missing
+- Alternative approaches that may be useful for investigating the observed patterns
+- Which findings should be prioritized for further analysis
+
+### Phase 2 Milestone
+
+By the end of Phase 2, the goal is to have an **analysis-ready dataset, a finalized research question, and initial visualizations and analyses that provide direction for the next phase.**
+
 ## Potential Research Directions
 
 Future analysis may investigate whether variation in Medicare utilization or payment is associated with:
@@ -76,7 +115,7 @@ Future analysis may investigate whether variation in Medicare utilization or pay
 - Therapy utilization
 - Provider-level characteristics
 
-The final research question will be refined as exploratory analysis progresses and with feedback from the Cotiviti practicum team.
+The potential research directions identified during Phase 1 will be further evaluated and refined into a final research question during Phase 2.
 
 ## Tools
 
