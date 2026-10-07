@@ -54,7 +54,7 @@ Three year analysis was performed using 2022–2024 provider data.
 
 - 1,217 unique providers appeared across the three years
 - 1,069 providers were present in all three years
-- 3,207 provider-year observations were included in the matched three-year dataset
+- 3,207 provider year observations were included in the matched three year dataset
 
 ### Analysis
 
@@ -92,8 +92,8 @@ Next steps:
 - Identify common analytical approaches and gaps in existing work
 - Investigate selected candidate providers
 - Explore potential explanations for unusual payment trajectories
-- Determine what cannot be explained using provider-level CMS data
-- Identify where claims-level data would be required for deeper FWA investigation
+- Determine what cannot be explained using provider level CMS data
+- Identify where claims level data would be required for deeper FWA investigation
 
 ---
 
