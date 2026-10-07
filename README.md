@@ -1,136 +1,121 @@
-# Cotiviti Practicum – CMS Medicare IRF Data Analysis
+# Cotiviti Practicum – Fall 2026
 
-## Project Overview
+## Medicare IRF Temporal Payment and Anomaly Analysis
 
-This repository contains work completed as part of my Fall 2026 Biomedical Informatics practicum with Cotiviti.
+This practicum uses publicly available CMS Medicare Post Acute Care Utilization data for Inpatient Rehabilitation Facilities (IRFs) to explore provider level payment patterns over time.
 
-The project focuses on exploring publicly available CMS Medicare data to identify meaningful patterns in healthcare utilization, provider characteristics, patient populations, and Medicare payments.
+The project focuses on using temporal analysis and provider peer comparisons to identify unusual payment patterns that may warrant further investigation within a Fraud, Waste, and Abuse (FWA) framework.
 
-The initial phase of the project is exploratory. Findings from this analysis will be used to develop and refine a focused research question for subsequent analysis.
+**Important:** Statistical anomalies identified in this project are screening signals and are not evidence of fraud.
 
-## Dataset
+---
 
-**CMS Medicare Post Acute Care Utilization – Inpatient Rehabilitation Facility (IRF) by Geography and Provider**
+## Data
 
-Current analysis uses the **2024 provider level dataset**.
+CMS Medicare Post Acute Care Utilization – Inpatient Rehabilitation Facility by Geography and Provider
 
-The dataset contains information related to:
+Years included:
+- 2022
+- 2023
+- 2024
 
-- Inpatient rehabilitation facility utilization
-- Medicare beneficiaries
-- Episode/stay counts
-- Service days
-- Medicare charges and payments
-- Beneficiary demographics
-- Beneficiary risk scores
-- Chronic health conditions
-- Primary diagnosis categories
-- Physical therapy (PT)
-- Occupational therapy (OT)
-- Speech/language pathology (SLP)
+The original 2024 dataset was expanded to include 2022 and 2023 to support longitudinal analysis.
 
-## Phase 1 – Exploratory Data Analysis
+---
 
-**Timeline:** August 24 – September 11, 2026
+## Phase 1 – Dataset Exploration ✅
 
-The purpose of Phase 1 is to understand the structure, quality, and characteristics of the CMS IRF dataset before developing a formal research question.
+- Explored CMS IRF dataset structure and variables
+- Examined provider, payment, utilization, diagnosis, beneficiary, and therapy variables
+- Evaluated initial payment patterns and potential outliers
+- Used Cotiviti and Jorie Butler feedback to guide project direction
 
-### Current Analysis
+---
 
-Initial exploratory analysis includes:
+## Phase 2 – Data Cleaning and Preparation ✅
 
-- Reviewing dataset structure and variables
-- Separating national, state, and provider level records
-- Identifying CMS suppressed values
-- Evaluating data types and data quality
-- Examining provider level utilization
-- Calculating average days per stay
-- Calculating Medicare payment per stay
-- Comparing beneficiary risk scores with Medicare payment
-- Comparing length of stay with Medicare payment
-- Examining variation and potential outliers across providers
+- Audited missingness and CMS suppression
+- Developed KEEP / REVIEW / EXCLUDE framework
+- Converted and validated numeric variables
+- Performed family level quality checks
+- Engineered per-stay payment and utilization measures
+- Created consistent cleaning methodology across annual datasets
+- Preserved suppressed values as missing rather than imputing values
 
-## Preliminary Observations
+Final annual datasets contain the original CMS variables plus engineered features for analysis.
 
-Early exploration shows substantial variation in Medicare payment per stay among IRF providers.
+---
 
-Initial analysis also suggests that:
+## Phase 3 – Temporal and Anomaly Analysis ✅
 
-- Length of stay has a moderate positive relationship with Medicare payment per stay.
-- Beneficiary average risk score has little apparent linear relationship with Medicare payment per stay.
-- Medicare payment per stay is right-skewed, with a relatively small number of providers showing substantially higher payments.
-- CMS data suppression is common in several demographic, diagnosis, and chronic condition variables and will need to be considered in future analyses.
+Three year analysis was performed using 2022–2024 provider data.
 
-These findings are preliminary and are being used to guide further investigation rather than represent final conclusions.
+### Provider Coverage
 
-## Phase 2 – Data Preparation and Analysis
+- 1,217 unique providers appeared across the three years
+- 1,069 providers were present in all three years
+- 3,207 provider-year observations were included in the matched three-year dataset
 
-**Timeline:** September 14 – October 9, 2026
+### Analysis
 
-Phase 2 builds on the exploratory analysis completed during Phase 1. The focus of this phase is to prepare the data for formal analysis, further investigate the patterns identified during exploration, and refine the project research question.
+- Evaluated year to year payment changes
+- Used robust modified Z-scores for anomaly screening
+- Evaluated provider volume as a potential source of bias
+- Developed volume based provider peer groups
+- Compared global and peer adjusted anomaly detection
+- Identified unusual provider payment trajectories
+- Examined three year patterns including continued changes and reversals
+- Evaluated volume, beneficiary risk, and therapy utilization as possible explanations
 
-### Current Goals
+The peer adjusted payment screen identified 40 candidate providers with unusual changes across multiple payment measures.
 
-Phase 2 analysis will include:
+Thirty of these providers had complete 2022–2024 histories and were included in the three year trajectory analysis.
 
-- Cleaning and preparing the provider-level dataset for analysis
-- Further evaluating CMS suppressed and missing values
-- Identifying variables most relevant to Medicare payment and utilization
-- Investigating variation and potential outliers in Medicare payment per stay
-- Examining provider-level characteristics associated with payment variation
-- Considering geographic, beneficiary risk, length of stay, diagnosis, and utilization factors
-- Adding or merging additional datasets where needed
-- Developing initial visualizations to examine important relationships and patterns
-- Using findings to refine and finalize the research question
+### Three-Year Standardized Payment Trajectories
 
-### Current Research Direction
+- Reversal Up: 11
+- Continued Increase: 11
+- Reversal Down: 7
+- Continued Decrease: 1
 
-Phase 1 identified substantial variation in Medicare payment per stay among IRF providers. Phase 2 will further investigate this variation and explore which provider, utilization, beneficiary, or geographic characteristics may help explain these differences.
+Changes in provider volume showed little relationship with changes in standardized payment per stay among the 30 candidates.
 
-Particular attention will be given to distinguishing variation that may be related to Medicare payment methodology from variation occurring at the provider level.
+These findings support using longitudinal patterns and peer comparisons to prioritize providers for additional investigation rather than interpreting a single unusual payment value as evidence of FWA.
 
-### Cotiviti Feedback
+---
 
-Feedback from the Cotiviti practicum team will be used throughout Phase 2 to evaluate:
+## Phase 4 – Candidate Investigation
 
-- Whether the findings support the developing research question
-- Whether important variables, comparisons, or datasets are missing
-- Alternative approaches that may be useful for investigating the observed patterns
-- Which findings should be prioritized for further analysis
+Next steps:
 
-### Phase 2 Milestone
+- Conduct a targeted literature review on Medicare FWA and healthcare anomaly detection
+- Identify common analytical approaches and gaps in existing work
+- Investigate selected candidate providers
+- Explore potential explanations for unusual payment trajectories
+- Determine what cannot be explained using provider-level CMS data
+- Identify where claims-level data would be required for deeper FWA investigation
 
-By the end of Phase 2, the goal is to have an **analysis ready dataset, a finalized research question, and initial visualizations and analyses that provide direction for the next phase.**
+---
 
-## Potential Research Directions
+## Phase 5 – Final Project
 
-Future analysis may investigate whether variation in Medicare utilization or payment is associated with:
+- Refine and validate findings
+- Compare results with relevant literature
+- Develop Tableau visualizations
+- Evaluate limitations and potential bias
+- Finalize interpretation and conclusions
+- Complete final paper and presentation
 
-- Geographic location
-- Length of stay
-- Beneficiary risk
-- Patient demographics
-- Chronic health conditions
-- Primary diagnosis categories
-- Therapy utilization
-- Provider level characteristics
+---
 
-The potential research directions identified during Phase 1 will be further evaluated and refined into a final research question during Phase 2.
+## Project Direction
 
-## Tools
+The purpose of this project is not to determine whether a provider has committed fraud.
 
-- Python
-- pandas
-- NumPy
-- Matplotlib
-- Jupyter Notebook
-- GitHub
-- Claude/VS Code 
+Instead, the project explores whether longitudinal provider payment patterns and peer adjusted anomaly detection can be used as a screening method to identify providers that may warrant more detailed review.
 
-## Project Status
+Provider level CMS data can help answer:
 
-**Academic Term:** Fall 2026
+**Where should we look more closely?**
 
-**Program:** University of Utah – Biomedical Informatics MS
-
-**Practicum Partner:** Cotiviti
+Claims level investigation would then be necessary to understand why an unusual payment pattern occurred and whether it has a legitimate explanation or represents potential FWA.
